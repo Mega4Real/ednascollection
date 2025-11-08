@@ -358,7 +358,28 @@ let selectedDresses = new Map(); // Stores selected dresses with their sizes
 document.addEventListener('DOMContentLoaded', () => {
     displayDresses();
     updateWhatsAppButton();
+    setupFooterIntersection();
 });
+
+// Setup intersection observer for footer
+function setupFooterIntersection() {
+    const footer = document.querySelector('.site-footer');
+    const floatingCart = document.querySelector('.floating-cart');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If footer is intersecting viewport, hide cart
+            floatingCart.classList.toggle('hide-cart', entry.isIntersecting);
+        });
+    }, {
+        threshold: 0,
+        rootMargin: '50px' // Starts hiding 50px before reaching footer
+    });
+    
+    if (footer && floatingCart) {
+        observer.observe(footer);
+    }
+}
 
 // Display dresses in the container
 function displayDresses() {
