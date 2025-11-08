@@ -1,5 +1,7 @@
 // Dress collection data
-const dresses = [
+// You can add dresses manually by editing the array below (copy an object and paste),
+// or use the helper function `addDress()` from the console to add programmatically.
+let dresses = [
     {
         id: 1,
         name: "Floral Summer Dress",
@@ -349,8 +351,63 @@ const dresses = [
         price: 189.99,
         sizes: ["S", "M", "L", "XL"],
         image: "pics/dress50.jpg"
-    }
+    },
+    {
+        id: 51,
+        name: "Special Occasion Dress",
+        price: 189.99,
+        sizes: ["S", "M", "L", "XL"],
+        image: "pics/dress1.jpg"
+    },
+   
 ];
+
+/*
+  Helper functions for managing the `dresses` array.
+  - You can still add dresses manually by editing the array above.
+  - Or, open the browser console and call `addDress({ name, price, sizes, image })`.
+  - Example: addDress({ name: 'New Dress', price: 99.99, sizes: ['S','M'], image: 'pics/new.jpg' })
+*/
+
+function getNextDressId() {
+    return dresses.reduce((max, d) => Math.max(max, d.id || 0), 0) + 1;
+}
+
+function addDress(d) {
+    if (!d || !d.name || (typeof d.price === 'undefined' && isNaN(parseFloat(d.price)))) {
+        console.error('Invalid dress object. Required: name, price, sizes, image');
+        return null;
+    }
+
+    const dress = {
+        id: d.id || getNextDressId(),
+        name: d.name,
+        price: typeof d.price === 'number' ? d.price : parseFloat(d.price),
+        sizes: Array.isArray(d.sizes) ? d.sizes : [d.sizes],
+        image: d.image || 'pics/default.jpg'
+    };
+
+    dresses.push(dress);
+    // Re-render current view if function available
+    if (typeof displayDresses === 'function') displayDresses(dresses);
+    return dress;
+}
+
+function removeDress(id) {
+    const idx = dresses.findIndex(d => d.id === id);
+    if (idx === -1) return false;
+    dresses.splice(idx, 1);
+    if (typeof displayDresses === 'function') displayDresses(dresses);
+    return true;
+}
+
+function updateDress(id, updates) {
+    const dress = dresses.find(d => d.id === id);
+    if (!dress) return null;
+    Object.assign(dress, updates);
+    if (typeof displayDresses === 'function') displayDresses(dresses);
+    return dress;
+}
 
 let selectedDresses = new Map(); // Stores selected dresses with their sizes
 
