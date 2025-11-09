@@ -121,7 +121,7 @@ header h1 {
 
 .selected-item img {
     width: 50px;
-    height: 50px;
+    height: 60px;
     object-fit: cover;
     border-radius: 4px;
     margin-right: 10px;
@@ -422,5 +422,4 @@ header h1 {
 /* Make dress cards show pointer cursor */
 .dress-image {
     cursor: pointer;
-
 }
