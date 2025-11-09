@@ -39,7 +39,7 @@ header h1 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 300px;
+    width: 200px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -149,7 +149,7 @@ header h1 {
     padding: 12px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -422,4 +422,5 @@ header h1 {
 /* Make dress cards show pointer cursor */
 .dress-image {
     cursor: pointer;
+
 }
