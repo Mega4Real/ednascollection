@@ -292,8 +292,6 @@ header h1 {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 1rem;
         padding: 1rem;
-        transform: scale(0.78);         /* ~22% shrink → feels 60% smaller */
-        transform-origin: top center;
     }
 }
 
@@ -435,3 +433,4 @@ header h1 {
     cursor: pointer;
 
 }
+
