@@ -298,13 +298,6 @@ header h1 {
         height:160px;   /* Smaller on mobile */
       }
     }
-
-@media (max-width: 480px) {
-      .dress-container {
-        grid-template-columns: 1fr;              /* 1 card on tiny screens */
-        padding:1rem;
-      }
-    }
     
 .dress-card {
     background: white;
