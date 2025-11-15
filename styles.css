@@ -288,9 +288,9 @@ header h1 {
     padding: 2rem;
 }
 
-@media (max-width: 120px) {
+@media (max-width: 50px) {
         .dress-container {
-        grid-template-columns: repeat(auto-fill,minmax(120px));
+        grid-template-columns: 1fr;
         padding: 1rem;
       }
     }
@@ -430,4 +430,5 @@ header h1 {
 /* Make dress cards show pointer cursor */
 .dress-image {
     cursor: pointer;
+
 }
