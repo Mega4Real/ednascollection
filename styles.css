@@ -312,7 +312,8 @@ header h1 {
 }
 
 .dress-info {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
 }
 
 .dress-title {
