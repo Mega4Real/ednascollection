@@ -289,6 +289,7 @@ header h1 {
 
 @media (max-width: 768px) {
     .dress-container {
+        display: grid;
         transform: scale(0.5);        /* exactly 50% smaller */
         transform-origin: top center;  /* keeps it aligned nicely */
     }
