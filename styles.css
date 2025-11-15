@@ -294,6 +294,16 @@ header h1 {
         padding:1.5rem;
         gap:1.5rem;
       }
+      .dress-image {
+        height:160px;   /* Smaller on mobile */
+      }
+    }
+
+@media (max-width: 480px) {
+      .dress-container {
+        grid-template-columns: 1fr;              /* 1 card on tiny screens */
+        padding:1rem;
+      }
     }
     
 .dress-card {
