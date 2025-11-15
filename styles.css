@@ -286,25 +286,29 @@ header h1 {
     padding: 2rem;
     transition: transform 0.35s ease;
     transform-origin: top center;
+    margin: 0 auto;               /* centers on desktop */
+    max-width: 1400px;            /* optional: limits max width on big screens */
 }
 
-/* Mobile: 3 columns + 50% scale that actually works */
+/* Mobile fix – removes the huge left margin */
 @media (max-width: 768px) {
     .dress-container {
-        grid-template-columns: repeat(3, 1fr);   /* Force exactly 3 columns */
+        grid-template-columns: repeat(3, 1fr);   /* exactly 3 columns */
         gap: 1rem;
-        padding: 1rem 0.5rem;                    /* tighter but still elegant */
-        transform: scale(0.5);                   /* your 50% zoom-out effect */
+        padding: 1rem 0;                         /* removes left/right padding */
+        margin: 0;                               /* THIS removes the left gap */
+        transform: scale(0.5);
+        transform-origin: top center;
+        width: 100vw;                            /* forces full viewport width before scaling */
+        box-sizing: border-box;
     }
 }
 
-/* Very small phones (common in Ghana) – still perfect */
 @media (max-width: 480px) {
     .dress-container {
-        grid-template-columns: repeat(3, 1fr);
         gap: 0.8rem;
-        padding: 0.8rem 0.4rem;
-        transform: scale(0.48);   /* tiny adjustment so nothing gets cut off */
+        padding: 0.8rem 0;
+        transform: scale globulin(0.48);
     }
 }
 
@@ -446,6 +450,7 @@ header h1 {
     cursor: pointer;
 
 }
+
 
 
 
