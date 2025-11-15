@@ -6,84 +6,84 @@ let dresses = [
         id: 1,
         name: "Floral Summer Dress",
         price: 79.99,
-        sizes: ["8-10", "M", "L", "XL"],
+        sizes: ["8-10"],
         image: "pics/dress1.jpg"
     },
     {
         id: 2,
         name: "Evening Gown",
         price: 149.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress2.jpg"
     },
     {
         id: 3,
         name: "Cocktail Party Dress",
         price: 129.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress3.jpg"
     },
     {
         id: 4,
         name: "Maxi Sundress",
         price: 89.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress4.jpg"
     },
     {
         id: 5,
         name: "Little Black Dress",
         price: 99.99,
-        sizes: ["XS", "S", "M", "L", "XL"],
+        sizes: ["XS"],
         image: "pics/dress5.jpg"
     },
     {
         id: 6,
         name: "Floral Print Midi Dress",
         price: 85.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress6.jpg"
     },
     {
         id: 7,
         name: "Bohemian Maxi Dress",
         price: 95.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress7.jpg"
     },
     {
         id: 8,
         name: "Wrap Dress",
         price: 75.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress8.jpg"
     },
     {
         id: 9,
         name: "A-Line Party Dress",
         price: 119.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress9.jpg"
     },
     {
         id: 10,
         name: "Summer Beach Dress",
         price: 69.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress10.jpg"
     },
     {
         id: 11,
         name: "Formal Ball Gown",
         price: 199.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress11.jpg"
     },
     {
         id: 12,
         name: "Casual T-Shirt Dress",
         price: 49.99,
-        sizes: ["XS", "S", "M", "L", "XL"],
+        sizes: ["XS"],
         image: "pics/dress12.jpg"
     },
     {
@@ -97,105 +97,105 @@ let dresses = [
         id: 14,
         name: "Wedding Guest Dress",
         price: 159.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress14.jpg"
     },
     {
         id: 15,
         name: "Prom Dress",
         price: 179.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress15.jpg"
     },
     {
         id: 16,
         name: "Office Wear Dress",
         price: 109.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress16.jpg"
     },
     {
         id: 17,
         name: "Summer Mini Dress",
         price: 59.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress17.jpg"
     },
     {
         id: 18,
         name: "Pleated Dress",
         price: 95.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress18.jpg"
     },
     {
         id: 19,
         name: "Lace Evening Dress",
         price: 169.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress19.jpg"
     },
     {
         id: 20,
         name: "Floral Maxi Dress",
         price: 129.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress20.jpg"
     },
     {
         id: 21,
         name: "Printed Sundress",
         price: 79.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress21.jpg"
     },
     {
         id: 22,
         name: "Denim Dress",
         price: 89.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress22.jpg"
     },
     {
         id: 23,
         name: "Silk Evening Gown",
         price: 199.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress23.jpg"
     },
     {
         id: 24,
         name: "Vintage Style Dress",
         price: 119.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress24.jpg"
     },
     {
         id: 25,
         name: "Party Sequin Dress",
         price: 149.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress25.jpg"
     },
     {
         id: 26,
         name: "Casual Stripe Dress",
         price: 69.99,
-        sizes: ["XS", "S", "M", "L", "XL"],
+        sizes: ["XS"],
         image: "pics/dress26.jpg"
     },
     {
         id: 27,
         name: "Formal Business Dress",
         price: 139.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress27.jpg"
     },
     {
         id: 28,
         name: "Bohemian Print Dress",
         price: 89.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress28.jpg"
     },
     {
@@ -223,140 +223,140 @@ let dresses = [
         id: 32,
         name: "Velvet Evening Dress",
         price: 159.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress32.jpg"
     },
     {
         id: 33,
         name: "Casual Summer Dress",
         price: 59.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress33.jpg"
     },
     {
         id: 34,
         name: "Floral Tea Dress",
         price: 85.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress34.jpg"
     },
     {
         id: 35,
         name: "Elegant Midi Dress",
         price: 129.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress35.jpg"
     },
     {
         id: 36,
         name: "Beach Cover Up Dress",
         price: 49.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress36.jpg"
     },
     {
         id: 37,
         name: "Polka Dot Dress",
         price: 75.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress37.jpg"
     },
     {
         id: 38,
         name: "Homecoming Dress",
         price: 169.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress38.jpg"
     },
     {
         id: 39,
         name: "Knit Sweater Dress",
         price: 89.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress39.jpg"
     },
     {
         id: 40,
         name: "Resort Wear Dress",
         price: 109.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress40.jpg"
     },
     {
         id: 41,
         name: "Holiday Party Dress",
         price: 149.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress41.jpg"
     },
     {
         id: 42,
         name: "Cotton Day Dress",
         price: 65.99,
-        sizes: ["XS", "S", "M", "L", "XL"],
+        sizes: ["XS"],
         image: "pics/dress42.jpg"
     },
     {
         id: 43,
         name: "Satin Evening Dress",
         price: 179.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress43.jpg"
     },
     {
         id: 44,
         name: "Ruffle Detail Dress",
         price: 95.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress44.jpg"
     },
     {
         id: 45,
         name: "Embroidered Dress",
         price: 139.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress45.jpg"
     },
     {
         id: 46,
         name: "Graduation Dress",
         price: 159.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress46.jpg"
     },
     {
         id: 47,
         name: "Spring Floral Dress",
         price: 79.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress47.jpg"
     },
     {
         id: 48,
         name: "Date Night Dress",
         price: 119.99,
-        sizes: ["XS", "S", "M", "L", "XL"],
+        sizes: ["XS"],
         image: "pics/dress48.jpg"
     },
     {
         id: 49,
         name: "Tiered Maxi Dress",
         price: 129.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress49.jpg"
     },
     {
         id: 50,
         name: "Special Occasion Dress",
         price: 189.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress50.jpg"
     },
     {
         id: 51,
         name: "Special Occasion Dress",
         price: 189.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress1.jpg"
     },
    
