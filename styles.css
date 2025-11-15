@@ -287,12 +287,6 @@ header h1 {
     padding: 2rem;
 }
 
-@media (max-width: 600px) {
-      .dress-container {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-}
-
 .dress-card {
     background: white;
     border-radius: 8px;
