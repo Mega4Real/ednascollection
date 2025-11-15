@@ -288,13 +288,13 @@ header h1 {
     padding: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 120px) {
         .dress-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill,minmax(120px));
         padding: 1rem;
       }
     }
-    
+
 .dress-card {
     background: white;
     border-radius: 12px;
