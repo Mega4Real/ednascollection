@@ -295,7 +295,7 @@ header h1 {
         gap:1.5rem;
       }
       .dress-image {
-        width: 50%;
+        width: 700px;
         height:160px;   /* Smaller on mobile */
       }
     }
