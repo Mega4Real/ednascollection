@@ -290,12 +290,13 @@ header h1 {
 /* Mobile: Real mobile layout + gentle 50% "zoom-out" feel */
 @media (max-width: 768px) {
     .dress-container {
-        grid-template-columns: repeat(2, minmax(140px, 1fr)); /* 2 columns only */
+        grid-template-columns: 1fr 1fr !important;  /* Force only 2 columns */
         gap: 1rem;
-        padding: 1rem;
-        transform: scale(0.92);           /* looks slightly smaller but still readable */
+        padding: 5%;                                 /* nice side margins */
+        transform: scale(0.5);
         transform-origin: top center;
     }
+}
 }
 
 @media (max-width: 480px) {
@@ -445,3 +446,4 @@ header h1 {
     cursor: pointer;
 
 }
+
