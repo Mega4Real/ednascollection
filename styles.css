@@ -284,33 +284,58 @@ header h1 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
     padding: 2rem;
-    transition: transform 0.35s ease;
-    margin: 0 auto;
-    max-width: 1400px;
 }
 
-/* MOBILE — THIS ONE FIXES IT FOREVER */
+/* Mobile: Compact, premium 2-column layout with ~50% "feel" reduction */
 @media (max-width: 768px) {
     .dress-container {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%) scale(0.5);   /* This is the magic line */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        padding: 0.8rem;
+        transform: scale(0.88);           /* ~12% reduction → feels compact */
         transform-origin: top center;
-        
-        /* Force exactly 3 columns */
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        padding: 1rem 2rem;           /* small side padding so it doesn’t touch edges */
-        width: fit-content;           /* very important */
-        margin: 0 auto;
+    }
+
+    .dress-card {
+        padding: 0.6rem;
+    }
+
+    .dress-image {
+        height: 180px;
+    }
+
+    .dress-price {
+        font-size: 1rem;
+    }
+
+    .size-option {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.75rem;
     }
 }
 
 @media (max-width: 480px) {
     .dress-container {
-        gap: 0.8rem;
-        padding: 0.8rem 1.5rem;
-        transform: translateX(-50%) scale(0.48);
+        transform: scale(0.78);           /* Stronger compact feel */
+        gap: 0.6rem;
+        padding: 0.6rem;
+    }
+
+    .dress-image {
+        height: 160px;
+    }
+
+    .dress-price {
+        font-size: 0.9rem;
+    }
+
+    .size-option {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.3rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
     }
 }
 
@@ -450,11 +475,4 @@ header h1 {
 /* Make dress cards show pointer cursor */
 .dress-image {
     cursor: pointer;
-
 }
-
-
-
-
-
-
