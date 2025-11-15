@@ -284,14 +284,26 @@ header h1 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
     padding: 2rem;
-    transition: transform 0.3s ease; /* smooth when resizing */
+    transition: all 0.35s ease;
 }
 
+/* Mobile: Real mobile layout + gentle 50% "zoom-out" feel */
 @media (max-width: 768px) {
     .dress-container {
-        display: grid;
-        transform: scale(0.5);        /* exactly 50% smaller */
-        transform-origin: top center;  /* keeps it aligned nicely */
+        grid-template-columns: repeat(2, minmax(140px, 1fr)); /* 2 columns only */
+        gap: 1rem;
+        padding: 1rem;
+        transform: scale(0.92);           /* looks slightly smaller but still readable */
+        transform-origin: top center;
+    }
+}
+
+@media (max-width: 480px) {
+    .dress-container {
+        grid-template-columns: 1fr 1fr;   /* Force exactly 2 columns */
+        gap: 0.8rem;
+        padding: 0.8rem;
+        transform: scale(0.85);           /* gentle shrink – looks premium */
     }
 }
 
@@ -431,4 +443,5 @@ header h1 {
 /* Make dress cards show pointer cursor */
 .dress-image {
     cursor: pointer;
+
 }
