@@ -284,6 +284,20 @@ header h1 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
     padding: 2rem;
+    
+    /* This is the magic for mobile */
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* ~50% smaller */
+        gap: 1rem;         /* 50% smaller gap */
+        padding: 1rem;     /* 50% smaller padding */
+    }
+    
+    /* Extra smooth for very small phones (common in Ghana) */
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 0.8rem;
+        padding: 0.8rem;
+    }
 }
 
 .dress-card {
