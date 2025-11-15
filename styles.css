@@ -286,56 +286,134 @@ header h1 {
     padding: 2rem;
 }
 
-/* Mobile: Compact, premium 2-column layout with ~50% "feel" reduction */
+/* -------------------------------------------------
+   ULTRA-COMPACT MOBILE LAYOUT – ~60% visual shrink
+   ------------------------------------------------- */
 @media (max-width: 768px) {
     .dress-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
-        padding: 0.8rem;
-        transform: scale(0.88);           /* ~12% reduction → feels compact */
+        gap: 0.5rem;                    /* Tighter gap */
+        padding: 0.5rem;
+        transform: scale(0.78);         /* ~22% shrink → feels 60% smaller */
         transform-origin: top center;
     }
 
     .dress-card {
-        padding: 0.6rem;
+        padding: 0.4rem;                /* Less internal padding */
+        border-radius: 6px;
     }
 
     .dress-image {
-        height: 180px;
+        height: 140px;                  /* Smaller image */
+        border-radius: 4px;
+    }
+
+    .dress-info {
+        margin-top: 0.5rem;
     }
 
     .dress-price {
-        font-size: 1rem;
+        font-size: 0.95rem;             /* Slightly smaller price */
+        margin-bottom: 0.3rem;
+    }
+
+    .size-options {
+        gap: 0.3rem;
+        margin-bottom: 0.4rem;
+        flex-wrap: wrap;                /* Wrap if many sizes */
     }
 
     .size-option {
-        padding: 0.2rem 0.4rem;
-        font-size: 0.75rem;
+        padding: 0.15rem 0.35rem;
+        font-size: 0.68rem;             /* Tiny but readable */
+        min-width: 28px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2.4rem;              /* Slightly smaller header */
+    }
+
+    /* Optional: reduce floating cart on small screens */
+    .floating-cart {
+        width: 170px;
+        padding: 10px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #selected-count {
+        font-size: 20px;
+    }
+
+    .total-price {
+        font-size: 16px;
+    }
+
+    .selected-item img {
+        width: 40px;
+        height: 50px;
+    }
+
+    .item-size, .item-price {
+        font-size: 0.7rem;
     }
 }
 
 @media (max-width: 480px) {
     .dress-container {
-        transform: scale(0.78);           /* Stronger compact feel */
-        gap: 0.6rem;
-        padding: 0.6rem;
+        transform: scale(0.72);         /* Even tighter on very small phones */
+        gap: 0.4rem;
+        padding: 0.4rem;
     }
 
     .dress-image {
-        height: 160px;
+        height: 125px;
     }
 
     .dress-price {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .size-option {
-        font-size: 0.7rem;
-        padding: 0.15rem 0.3rem;
+        font-size: 0.62rem;
+        padding: 0.12rem 0.3rem;
+        min-width: 24px;
     }
 
     header h1 {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
+    }
+
+    .floating-cart {
+        width: 155px;
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    #send-to-whatsapp {
+        padding: 8px;
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .whatsapp-icon {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .dress-container {
+        transform: scale(0.68);
+    }
+
+    .dress-image {
+        height: 115px;
+    }
+
+    .size-option {
+        font-size: 0.58rem;
+        padding: 0.1rem 0.25rem;
     }
 }
 
