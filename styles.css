@@ -71,6 +71,7 @@ header {
         flex-direction: row;
         gap: 0.25rem;
         flex-wrap: wrap;
+        margin-top: 1rem;
         justify-content: center;
     }
 
