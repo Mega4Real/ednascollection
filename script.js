@@ -551,8 +551,22 @@ function updateSelectedCount() {
                 <div class="item-size">Size: ${dress.selectedSize}</div>
                 <div class="item-price">₵${dress.price.toFixed(2)}</div>
             </div>
+            <button class="delete-item" data-id="${dress.id}">×</button>
         `;
         selectedItemsContainer.appendChild(itemElement);
+
+        // Add event listener to delete button
+        const deleteButton = itemElement.querySelector('.delete-item');
+        deleteButton.addEventListener('click', () => {
+            selectedDresses.delete(dress.id);
+            // Remove selected class from the dress card if it exists
+            const dressCard = document.querySelector(`.dress-card[data-id="${dress.id}"]`);
+            if (dressCard) {
+                dressCard.classList.remove('selected');
+            }
+            updateSelectedCount();
+            updateWhatsAppButton();
+        });
     });
 }
 
@@ -685,6 +699,17 @@ function displayDresses(dressArray = dresses) {
     dressArray.forEach(dress => {
         const dressElement = createDressElement(dress);
         container.appendChild(dressElement);
+    });
+
+    // Reapply selected state to dress cards
+    document.querySelectorAll('.dress-card').forEach(card => {
+        const id = parseInt(card.dataset.id);
+        if (selectedDresses.has(id)) {
+            card.classList.add('selected');
+            const selectedSize = selectedDresses.get(id).selectedSize;
+            const sizeOption = card.querySelector(`.size-option[data-size="${selectedSize}"]`);
+            if (sizeOption) sizeOption.classList.add('selected');
+        }
     });
 }
 
