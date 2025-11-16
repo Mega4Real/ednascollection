@@ -636,20 +636,29 @@ function showPreview(dress) {
 
 // Setup filters
 function setupFilters() {
-    const priceMinInput = document.getElementById('price-min');
-    const priceMaxInput = document.getElementById('price-max');
+    const priceSelect = document.getElementById('price-filter');
     const sizeSelect = document.getElementById('size-filter');
     const clearFiltersButton = document.getElementById('clear-filters');
 
     // Function to apply filters
     function applyFilters() {
-        const minPrice = parseFloat(priceMinInput.value) || 0;
-        const maxPrice = parseFloat(priceMaxInput.value) || Infinity;
-        const selectedSizes = Array.from(sizeSelect.selectedOptions).map(option => option.value);
+        const selectedPriceRange = priceSelect.value;
+        const selectedSize = sizeSelect.value;
 
         const filteredDresses = dresses.filter(dress => {
-            const priceMatch = dress.price >= minPrice && dress.price <= maxPrice;
-            const sizeMatch = selectedSizes.length === 0 || selectedSizes.some(size => dress.sizes.includes(size));
+            // Price filter
+            let priceMatch = true;
+            if (selectedPriceRange) {
+                const [min, max] = selectedPriceRange.split('-').map(Number);
+                priceMatch = dress.price >= min && dress.price <= max;
+            }
+
+            // Size filter
+            let sizeMatch = true;
+            if (selectedSize) {
+                sizeMatch = dress.sizes.includes(selectedSize);
+            }
+
             return priceMatch && sizeMatch;
         });
 
@@ -657,15 +666,13 @@ function setupFilters() {
     }
 
     // Event listeners for filters
-    priceMinInput.addEventListener('input', applyFilters);
-    priceMaxInput.addEventListener('input', applyFilters);
+    priceSelect.addEventListener('change', applyFilters);
     sizeSelect.addEventListener('change', applyFilters);
 
     // Clear filters
     clearFiltersButton.addEventListener('click', () => {
-        priceMinInput.value = '';
-        priceMaxInput.value = '';
-        sizeSelect.selectedIndex = -1; // Deselect all options
+        priceSelect.value = '';
+        sizeSelect.value = '';
         displayDresses(dresses); // Show all dresses
     });
 }
