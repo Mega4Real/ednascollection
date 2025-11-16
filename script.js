@@ -6,14 +6,14 @@ let dresses = [
         id: 1,
         name: "Floral Summer Dress",
         price: 79.99,
-        sizes: ["8-10"],
+        sizes: ["8"],
         image: "pics/dress1.jpg"
     },
     {
         id: 2,
         name: "Evening Gown",
         price: 149.99,
-        sizes: ["S"],
+        sizes: ["12"],
         image: "pics/dress2.jpg"
     },
     {
@@ -202,21 +202,21 @@ let dresses = [
         id: 29,
         name: "Chiffon Dress",
         price: 99.99,
-        sizes: ["XS", "S", "M", "L"],
+        sizes: ["XS"],
         image: "pics/dress29.jpg"
     },
     {
         id: 30,
         name: "Wedding Reception Dress",
         price: 189.99,
-        sizes: ["S", "M", "L"],
+        sizes: ["S"],
         image: "pics/dress30.jpg"
     },
     {
         id: 31,
         name: "Summer Party Dress",
         price: 79.99,
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S"],
         image: "pics/dress31.jpg"
     },
     {
