@@ -399,6 +399,42 @@ header h1 {
     padding: 2rem;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.pagination button.active {
+    background-color: #ff69b4;
+    color: white;
+    border-color: #ff69b4;
+}
+
+.pagination button:disabled {
+    background-color: #f0f0f0;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
 @media (max-width: 900px) {
       .dress-container {
         grid-template-columns:repeat(2,1fr);
