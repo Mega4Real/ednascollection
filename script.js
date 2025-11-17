@@ -1853,6 +1853,7 @@ function updateDress(id, updates) {
 let selectedDresses = new Map(); // Stores selected dresses with their sizes
 let currentPage = 1; // Current page for pagination
 const dressesPerPage = 50; // Number of dresses per page
+let currentDressArray = dresses; // Current array of dresses (filtered or all)
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
@@ -1883,7 +1884,7 @@ function setupFooterIntersection() {
 }
 
 // Display dresses in the container
-function displayDresses(dressArray = dresses, page = currentPage) {
+function displayDresses(dressArray = currentDressArray, page = currentPage) {
     const container = document.getElementById('dress-container');
     container.innerHTML = '';
 
@@ -1898,6 +1899,9 @@ function displayDresses(dressArray = dresses, page = currentPage) {
 
     // Update pagination
     updatePagination(dressArray.length);
+
+    // Scroll to top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Create individual dress card
@@ -2126,6 +2130,7 @@ function setupFilters() {
             return priceMatch && sizeMatch;
         });
 
+        currentDressArray = filteredDresses; // Update current array
         currentPage = 1; // Reset to first page when filtering
         displayDresses(filteredDresses, currentPage);
     }
@@ -2138,13 +2143,14 @@ function setupFilters() {
     clearFiltersButton.addEventListener('click', () => {
         priceSelect.value = '';
         sizeSelect.value = '';
+        currentDressArray = dresses; // Reset to all dresses
         currentPage = 1; // Reset to first page
         displayDresses(dresses, currentPage); // Show all dresses
     });
 }
 
 // Modify displayDresses to accept filtered array
-function displayDresses(dressArray = dresses, page = currentPage) {
+function displayDresses(dressArray = currentDressArray, page = currentPage) {
     const container = document.getElementById('dress-container');
     container.innerHTML = '';
 
@@ -2170,6 +2176,9 @@ function displayDresses(dressArray = dresses, page = currentPage) {
 
     // Update pagination
     updatePagination(dressArray.length);
+
+    // Scroll to top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Update pagination controls
@@ -2188,7 +2197,7 @@ function updatePagination(totalDresses) {
     prevButton.addEventListener('click', () => {
         if (currentPage > 1) {
             currentPage--;
-            displayDresses();
+            displayDresses(currentDressArray);
         }
     });
     paginationContainer.appendChild(prevButton);
@@ -2206,10 +2215,10 @@ function updatePagination(totalDresses) {
         const pageButton = document.createElement('button');
         pageButton.textContent = i;
         pageButton.classList.toggle('active', i === currentPage);
-        pageButton.addEventListener('click', () => {
-            currentPage = i;
-            displayDresses();
-        });
+    pageButton.addEventListener('click', () => {
+        currentPage = i;
+        displayDresses(currentDressArray);
+    });
         paginationContainer.appendChild(pageButton);
     }
 
@@ -2220,7 +2229,7 @@ function updatePagination(totalDresses) {
     nextButton.addEventListener('click', () => {
         if (currentPage < totalPages) {
             currentPage++;
-            displayDresses();
+            displayDresses(currentDressArray);
         }
     });
     paginationContainer.appendChild(nextButton);
